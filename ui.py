@@ -12,7 +12,8 @@ user_id = st.number_input("Enter User ID", min_value=1, step=1)
 if st.button("Get Recommendation"):
     try:
         # Replace this with your FastAPI URL
-        url = "http://127.0.0.1:8000/recommend"  # Local machine
+        url = "http://127.0.0.1:8000/recommend"
+
         # For Colab, use ngrok URL instead:
         # url = "http://abcd1234.ngrok.io/recommend"
 
@@ -30,3 +31,4 @@ if st.button("Get Recommendation"):
     except Exception as e:
         st.error(f"❌ API not running. Details: {e}")
  
+
